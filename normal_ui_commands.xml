@@ -1,0 +1,30 @@
+<!--XML TermuxUI-->
+<?xml version="1.0" encoding="utf-8"?>
+<commands
+    app_name="PS3 PKG Toolbox"
+    ui_title="PS3 PKG Toolbox">
+    <command
+        label="Instalar dependências"
+        command="apt update &amp;&amp; apt upgrade -y &amp;&amp; apt install git python -y &amp;&amp; pip install setuptools pycryptodome &amp;&amp; cd /sdcard &amp;&amp; git clone https://github.com/infinitykkj/PS3-PKG-Module &amp;&amp; rm -rf ./ps3lib &amp;&amp; mv ./PS3-PKG-Module ./ps3lib &amp;&amp; cd ./ps3lib &amp;&amp; echo 'Instalação Concluída'" />
+
+    <command
+        label="Extrair PKG"
+        command="echo 'Iniciando Extração...' &amp;&amp; cd /sdcard/ps3lib &amp;&amp; python main.py [hint=Escolha o PKG que deseja extrair:type=get_file_path] -o [hint=Escolha onde deseja salvar os arquivos extraidos:type=get_dir_path]" />
+
+    <command
+        label="Extrair PKG via URL"
+        command="echo 'Iniciando Extração...Obs: via URL é mais lento\n' &amp;&amp; cd /sdcard/ps3lib &amp;&amp; python main.py [hint=Insira a URL d,o PKG que deseja extrair:type=text] -o [hint=Escolha onde deseja salvar os arquivos extraidos:type=get_dir_path]" />
+
+    <command
+        label="Build Custom PKG"
+        command="echo 'Iniciando Build...' &amp;&amp; cd /sdcard/ps3lib &amp;&amp; python pkg_builder.py [hint=Escolha a pasta desejada com os arquivos do pkg:type=get_dir_path] &amp;&amp; mv ./CUSTOM-INSTALLER_00-0000000000000000.pkg [hint=Escolha onde deseja salvar o pkg:type=get_dir_path] &amp;&amp; echo 'Build Concluído'" />
+
+    <command
+        label="Build Retail PKG"
+        command="echo 'Iniciando Build retail...' &amp;&amp; cd /sdcard/ps3lib &amp;&amp; python pkg_builder.py &quot;[hint=Escolha a pasta desejada com os arquivos do pkg retail:type=get_dir_path]&quot; -c &quot;[hint=Insira o Content ID:type=text]&quot; &amp;&amp; mv ./*.pkg &quot;[hint=Escolha onde deseja salvar os pkgs:type=get_dir_path]&quot; &amp;&amp; echo 'Build Concluído'" />
+
+    <command
+        label="Build Retail PKG com RAP"
+        command="echo 'Iniciando Build retail com RAP...' &amp;&amp; cd /sdcard/ps3lib &amp;&amp; python pkg_builder.py &quot;[hint=Escolha a pasta desejada com os arquivos do pkg retail:type=get_dir_path]&quot; -c &quot;[hint=Insira o Content ID:type=text]&quot; --rap &quot;[hint=Escolha o arquivo RAP desejado para assinar o PKG:type=get_file_path]&quot; &amp;&amp; mv ./*.pkg &quot;[hint=Escolha onde deseja salvar os pkgs:type=get_dir_path]&quot; &amp;&amp; echo 'Build Concluído'" />
+
+</commands>
