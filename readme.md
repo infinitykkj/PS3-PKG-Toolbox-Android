@@ -1,4 +1,3 @@
-```markdown
 # PS3 PKG Toolbox
 
 Uma ferramenta simples para **extrair e criar arquivos PKG de PlayStation 3 diretamente no Android**.
