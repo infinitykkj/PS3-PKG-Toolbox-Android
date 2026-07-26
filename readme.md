@@ -86,19 +86,10 @@ Isso é necessário porque o aplicativo utiliza o mesmo ambiente e os mesmos com
 
 ---
 
-## Suporte
-
-O PS3 PKG Toolbox foi desenvolvido para facilitar o trabalho com arquivos PKG de PlayStation 3 diretamente em dispositivos Android, oferecendo uma interface gráfica simples para as principais operações de extração e criação de pacotes.
-
-O aplicativo é baseado no projeto **TermuxUI-Frontend**.
-
----
-
 ## Source
 
-- **PS3 PKG Toolbox** — Interface e integração para Android  
 - **TermuxUI-Frontend** — Base do frontend e interface gráfica  
-  https://github.com/TermuxUI/TermuxUI-Frontend  
+  https://github.com/infinitykkj/TermuxUI-Frontend  
 
 - **PS3-PKG-Module** — Ferramentas utilizadas para manipulação e criação dos arquivos PKG  
   https://github.com/PS3-Tools/PS3-PKG-Module  
